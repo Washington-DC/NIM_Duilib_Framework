@@ -146,6 +146,7 @@ public:
 
 protected:
 	// Called just prior to starting the message loop
+
 	virtual void Init() {}
 
 	// Called to start the message loop

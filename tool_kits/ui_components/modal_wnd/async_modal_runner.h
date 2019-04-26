@@ -35,13 +35,12 @@ public:
 	bool DoModal(ModalWndBase *dlg);
 	void CancelModalThenExit();
 
+	AsyncModalRunner(Delegate *delegate);
+	virtual ~AsyncModalRunner();
 private:
 	friend class AsyncModalRunnerManager;
 	friend class std::shared_ptr<AsyncModalRunner>;
 	friend class std::_Ref_count<AsyncModalRunner>;
-	
-	AsyncModalRunner(Delegate *delegate);
-	virtual ~AsyncModalRunner();
 
 	void Run();
 

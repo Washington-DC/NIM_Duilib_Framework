@@ -22,6 +22,7 @@ namespace nbase
 // Thread to setup and run a MessageLoop.
 nbase::LazyInstance<nbase::ThreadLocalPointer<FrameworkThreadTlsData> > lazy_tls_data;
 
+
 FrameworkThread::FrameworkThread(const char* name)
 	: started_(false),
 	  stopping_(false),

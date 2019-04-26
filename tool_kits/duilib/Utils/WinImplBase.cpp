@@ -108,14 +108,14 @@ LRESULT WindowImplBase::OnNcPaint(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL&
 
 LRESULT WindowImplBase::OnNcLButtonDbClick(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
 {
-	/*if (!::IsZoomed(GetHWND()))
+	if (!::IsZoomed(GetHWND()))
 	{
 		SendMessage(WM_SYSCOMMAND, SC_MAXIMIZE, 0);
 	}
 	else
 	{
 		SendMessage(WM_SYSCOMMAND, SC_RESTORE, 0);
-	}*/
+	}
 
 	return 0;
 }
@@ -254,6 +254,15 @@ LRESULT WindowImplBase::OnSize(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bH
 		HRGN hRgn = ::CreateRoundRectRgn(rcWnd.left, rcWnd.top, rcWnd.right, rcWnd.bottom, szRoundCorner.cx, szRoundCorner.cy);
 		::SetWindowRgn(GetHWND(), hRgn, TRUE);
 		::DeleteObject(hRgn);
+	}
+
+
+	if (m_pRoot)
+	{
+		auto pCtrl = FindControl(L"maxbtn");
+		if(pCtrl) pCtrl->SetVisible(!::IsZoomed(m_hWnd));
+		pCtrl = FindControl(L"restorebtn");
+		pCtrl->SetVisible(::IsZoomed(m_hWnd));
 	}
 
 	bHandled = FALSE;
