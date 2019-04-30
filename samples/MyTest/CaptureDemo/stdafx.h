@@ -27,3 +27,5 @@
 
 // duilib
 #include "duilib/UIlib.h"
+
+#include "TUtil/TUtil.h"

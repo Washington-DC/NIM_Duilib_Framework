@@ -27,9 +27,6 @@
     <ClInclude Include="CaptureDemo.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Util.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="MainWindow.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -39,9 +36,6 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="CaptureDemo.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Util.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="MainWindow.cpp">
@@ -60,5 +54,8 @@
     <Image Include="CaptureDemo.ico">
       <Filter>资源文件</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\bin\resources.zip" />
   </ItemGroup>
 </Project>

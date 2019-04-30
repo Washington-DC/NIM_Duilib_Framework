@@ -24,7 +24,7 @@
     <ClInclude Include="Resource.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="ScreenSaver.h">
+    <ClInclude Include="CaptureDemo.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="MainWindow.h">
@@ -35,7 +35,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="ScreenSaver.cpp">
+    <ClCompile Include="CaptureDemo.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="MainWindow.cpp">
@@ -43,7 +43,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="ScreenSaver.rc">
+    <ResourceCompile Include="CaptureDemo.rc">
       <Filter>资源文件</Filter>
     </ResourceCompile>
   </ItemGroup>
@@ -51,8 +51,11 @@
     <Image Include="small.ico">
       <Filter>资源文件</Filter>
     </Image>
-    <Image Include="ScreenSaver.ico">
+    <Image Include="CaptureDemo.ico">
       <Filter>资源文件</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\bin\resources.zip" />
   </ItemGroup>
 </Project>

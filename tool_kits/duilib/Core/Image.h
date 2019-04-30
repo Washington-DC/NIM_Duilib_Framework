@@ -30,7 +30,7 @@ public:
 	static std::unique_ptr<ImageInfo> LoadImage(const std::wstring& strImageFullPath);
 	static std::unique_ptr<ImageInfo> LoadImage(HGLOBAL hGlobal, const std::wstring& imageFullPath);
 
-private:
+public:
 	static std::unique_ptr<ImageInfo> LoadImageByBitmap(std::unique_ptr<Gdiplus::Bitmap>& pGdiplusBitmap, const std::wstring& imageFullPath);
 
 public:
